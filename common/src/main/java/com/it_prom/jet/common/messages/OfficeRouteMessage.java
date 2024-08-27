@@ -1,7 +1,7 @@
 package com.it_prom.jet.common.messages;
 
-import com.it_prom.jet.common.bean.Airport;
 import com.it_prom.jet.common.bean.Board;
+import com.it_prom.jet.common.bean.Route;
 import com.it_prom.jet.common.bean.Source;
 import com.it_prom.jet.common.bean.Type;
 import lombok.Getter;
@@ -9,17 +9,17 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class BoardStateMessage extends Message{
-    private Board board;
+public class OfficeRouteMessage extends Message{
+    private Route route;
 
-    public BoardStateMessage(){
-        this.source = Source.BOARD;
-        this.type = Type.STATE;
+    public OfficeRouteMessage(){
+        this.source = Source.OFFICE;
+        this.type = Type.ROUTE;
     }
 
-    public BoardStateMessage(Board val){
+    public OfficeRouteMessage(Route route){
         this();
-        this.board = val;
+        this.route = route;
     }
 
 }
